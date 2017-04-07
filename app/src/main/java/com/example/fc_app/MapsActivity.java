@@ -42,6 +42,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng InSkyHotel = new LatLng(24.182847, 120.644943);
         mMap.addMarker(new MarkerOptions().position(InSkyHotel).title("InSky Hotel"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(InSkyHotel));
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(18));
+
+
+        mMap.getUiSettings().setMapToolbarEnabled(true);
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(18)); //放大地圖 18倍
     }
 }
